@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="min-h-full !mr-0" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMD-IOT</title>
+</head>
+
+<body>
+  <!-- <script>
+    var images = [];
+    function preload() {
+      for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+      }
+    }
+    preload(
+      "./src/assets/logo_TMD_loading.png",
+      "https://s.w-x.co/WeatherImages_Web/WeatherImage_Fair-day_1.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/under-computer.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/laptop-metrics.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/programming.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/microsoft-hololens.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/virtual-reality.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/server-shutdown.png",
+      "https://img.icons8.com/material/24/FFFFFF/baby-bottle--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/bream.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/sd.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/bios.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/touchpad--v1.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/joint.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/israeli-parliament.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/ice-cream-truck.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/food-cart.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/restaurant.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/cafe--v1.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/wharf.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/police-car.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/city-railway-station.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/car.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/shopping-mall.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/treasure-chest.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/3d-glasses.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/movie-theater.png",
+      "https://img.icons8.com/material/24/FFFFFF/sell-property--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/commercial-development-management.png",
+      "https://img.icons8.com/material/24/FFFFFF/news--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/rules--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/documents--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/certificate--v3.png",
+      "https://img.icons8.com/material/24/FFFFFF/starfish.png",
+      "https://img.icons8.com/material/24/FFFFFF/shark.png",
+      "https://img.icons8.com/material/24/FFFFFF/timeline--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/stocks-growth.png",
+      "https://img.icons8.com/material/24/FFFFFF/pie-chart--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/bar-chart--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/area-chart--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/sell-property--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/commercial-development-management.png",
+      "https://img.icons8.com/material/24/FFFFFF/kiosk-on-wheels.png",
+      "https://img.icons8.com/material/24/FFFFFF/department--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/confectionery--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/filled-appointment-reminders.png",
+      "https://img.icons8.com/material/24/FFFFFF/teamwork.png",
+      "https://img.icons8.com/material/24/FFFFFF/trust--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/approval--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/trust--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/whale.png",
+      "https://img.icons8.com/material/24/FFFFFF/online-support--v3.png",
+      "https://img.icons8.com/material/24/FFFFFF/puppy.png",
+      "https://img.icons8.com/material/24/FFFFFF/meeting-room.png",
+      "https://img.icons8.com/material/24/FFFFFF/conference--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/inspection--v1.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/lipstick.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/perfume-bottle.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/shake-gently.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/cosmetic-soap.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/hair-dryer.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/barbershop.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/afro-pick.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/spa-flower.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/aroma.png",
+      "https://img.icons8.com/material-rounded/24/FFFFFF/bathrobe.png",
+      "https://img.icons8.com/material/24/FFFFFF/babys-room--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/stroller--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/baby-feet--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/starfish.png",
+      "https://img.icons8.com/material/24/FFFFFF/baby-bottle--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/icons8-new-logo.png",
+      "https://img.icons8.com/material/24/FFFFFF/whale.png",
+      "https://img.icons8.com/material/24/FFFFFF/puppy.png",
+      "https://img.icons8.com/material/24/FFFFFF/pixel-cat.png",
+      "https://img.icons8.com/material/24/FFFFFF/ant.png",
+      "https://img.icons8.com/material/24/FFFFFF/butterfly-side-view.png",
+      "https://img.icons8.com/material/24/FFFFFF/butterfly.png",
+      "https://img.icons8.com/material/24/FFFFFF/bird.png",
+      "https://img.icons8.com/material/24/FFFFFF/flying-duck.png",
+      "https://img.icons8.com/material/24/FFFFFF/puffin-bird.png",
+      "https://img.icons8.com/material/24/FFFFFF/pinguin.png",
+      "https://img.icons8.com/material/24/FFFFFF/pelican.png",
+      "https://img.icons8.com/material/24/FFFFFF/owl--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/parakeet.png",
+      "https://img.icons8.com/material/24/FFFFFF/speech-bubble--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/sun--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/user-male--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/user-female--v1.png",
+      "https://img.icons8.com/material/24/FFFFFF/for-you.png",
+      "https://img.icons8.com/material/24/FFFFFF/dashboard-layout.png",
+      "https://img.icons8.com/sf-black-filled/24/FFFFFF/chrome-reader-mode.png",
+    )
+  </script> -->
+  <div id="app">
+    <div class="loading-page fixed w-full ">
+      <!-- <img src="/img/logo_TMD_loading.png " class="animate__pulse logo" /> -->
+      <div class="loading-message animate__flash">
+        Loading
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </div>
+  <noscript>
+    <h1>Iot Platform</h1>
+
+    <p>By Ruttanachot Kaeyai</p>
+    <p>By krittapoj lertriddecha</p>
+  </noscript>
+
+</body>
+<style>
+  #app {
+    font-family: "Prompt", sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  .loading-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .loading-bar {
+    width: 50%;
+    height: 10px;
+    background-color: #ccc;
+    animation: loading 1s linear infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  .loading-message {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    animation: flash infinite;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+  }
+
+  .logo {
+    animation: pulse infinite;
+    animation-duration: 2s;
+  }
+</style>
+
+</html>
